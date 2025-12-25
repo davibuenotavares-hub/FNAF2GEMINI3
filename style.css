@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    user-select: none;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Escritório */
+#office {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #333 0%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#status-bar {
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #444;
+}
+
+#music-box-ui { color: #ffff00; }
+
+/* Áreas de clique */
+.click-area {
+    position: absolute;
+    height: 50%;
+    top: 20%;
+    /* background: rgba(255,255,255,0.1); Descomente para ver as áreas */
+}
+#duct-left { left: 0; width: 20%; }
+#hallway { left: 30%; width: 40%; }
+#duct-right { right: 0; width: 20%; }
+
+#ui-main {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+/* Câmeras */
+#camera-feed {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #000;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+#camera-display {
+    flex: 2;
+    border: 4px solid #333;
+    margin: 10px;
+    position: relative;
+    background: #111; /* Aqui entrariam as fotos das câmeras */
+}
+
+#cam-info {
+    position: absolute;
+    top: 10px; left: 10px;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+#detected-text { color: #ff3333; }
+
+#wind-music-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background: #ffcc00;
+    border: none;
+    font-family: 'Press Start 2P';
+    font-size: 8px;
+}
+
+#camera-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.cam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    background: #222;
+    color: white;
+    border: 2px solid #555;
+    padding: 10px;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+}
+
+button:active { background: #444; }
+
+.hidden { display: none !important; }
+
+#jumpscare-screen {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: red;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-size: 30px;
+}
