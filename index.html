@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Survival Night 2 Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="office">
+            <div id="status-bar">
+                <div>ENERGIA: <span id="power">100</span>%</div>
+                <div>HORA: <span id="hour">0</span> AM</div>
+                <div id="music-box-ui">CAIXA: <span id="music-box-level">100</span>%</div>
+            </div>
+
+            <div id="duct-left" class="click-area"></div>
+            <div id="hallway" class="click-area"></div>
+            <div id="duct-right" class="click-area"></div>
+            
+            <div id="ui-main">
+                <button id="mask-btn">MÁSCARA</button>
+                <button id="light-btn">LANTERNA</button>
+                <button id="camera-btn">CÂMERAS</button>
+            </div>
+        </div>
+
+        <div id="camera-feed" class="hidden">
+            <div id="camera-display">
+                <div id="cam-info">
+                    <span id="camera-name">CAM 01</span><br>
+                    <span id="detected-text">ANIMATRÔNICOS: <span id="detected-names">Nenhum</span></span>
+                </div>
+                
+                <button id="wind-music-btn">DAR CORDA NA CAIXA</button>
+            </div>
+            
+            <div id="camera-menu">
+                <div class="cam-grid">
+                    <button class="cam-sel" data-cam="1">CAM 1</button>
+                    <button class="cam-sel" data-cam="2">CAM 2</button>
+                    <button class="cam-sel" data-cam="3">CAM 3</button>
+                </div>
+                <button id="close-cam-btn">VOLTAR</button>
+            </div>
+        </div>
+
+        <div id="jumpscare-screen" class="hidden">GAME OVER</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
